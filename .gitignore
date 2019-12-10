@@ -37,3 +37,8 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Items in folder
+/files/*
+/uk_wpc_sim_points/*
+/maps/*
