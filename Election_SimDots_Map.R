@@ -26,9 +26,11 @@ uk_wpc_sim_points_map <- tm_shape(uk_wpc_sim_points_df) +
 
 tmap_save(
   uk_wpc_sim_points_map,
-  "maps/uk_wpc_sim_points_10ppp.png", 
-  width = 4960, 
-  height = 7015
+  "maps/uk_wpc_sim_points_10ppp_1200dpi.png", 
+  width = 210, 
+  height = 298,
+  units = "mm",
+  dpi = 1200
 )
 
 
