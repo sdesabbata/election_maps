@@ -50,16 +50,31 @@ uk_wpc_sim_points_map <- tm_shape(
     size = 0.0001
   ) +
   tm_credits(
-    "1 dot = 10 votes\n\nv0.1 17/12/2019\nby Stefano De Sabbata @maps4thought\n\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+    "1 dot = 10 votes\n\nby Stefano De Sabbata @maps4thought\nv0.1 18/12/2019\n\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
     position=c("left", "top"),
     col = "#FFFFFF"
   )
 
 
-# Save --------------------------------------------------------------------
+# Save 1 ------------------------------------------------------------------
 
 # Resolution
 map_dpi = 1200
+
+# Save
+tmap_save(
+  uk_wpc_sim_points_map,
+  paste0("maps/ge2019_sim_points_10ppp_", map_dpi, "dpi.png"), 
+  width = 210, 
+  height = 298,
+  units = "mm",
+  dpi = map_dpi
+)
+
+# Save 2 ------------------------------------------------------------------
+
+# Resolution
+map_dpi = 150
 
 # Save
 tmap_save(

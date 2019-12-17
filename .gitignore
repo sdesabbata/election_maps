@@ -39,7 +39,7 @@ vignettes/*.pdf
 .Renviron
 
 # Items in folder
-files/*
+wpc/*
 ge2019/*
 dots/*
 

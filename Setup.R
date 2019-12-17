@@ -5,12 +5,19 @@
 # Licensed under the GNU General Public License v3.0 https://www.gnu.org/licenses/gpl-3.0.html
 ##########
 
-# Clone wpc repo by Alasdair Rae
-# https://github.com/alasdairrae/wpc
-system("git clone https://github.com/alasdairrae/wpc.git ../wpc")
 
-# then, copy geographic data from
-file.copy("../wpc/files", "./wpc/", recursive=TRUE)
+# Clone wpc repo by Alasdair Rae to a tmp folder
+# https://github.com/alasdairrae/wpc
+system("git clone https://github.com/alasdairrae/wpc.git ../wpc---tmp")
+
+# Create wpc dir if necessary
+ifelse(!dir.exists(file.path(".", "wpc")), dir.create(file.path(".", "wpc")), FALSE)
+
+# Copy geographic data from
+file.copy("../wpc---tmp/files", "./wpc/", recursive=TRUE)
+
+# Delete tmp folder
+unlink("../wpc---tmp", recursive = TRUE)
 
 
 # Create ge2019 dir if necessary
