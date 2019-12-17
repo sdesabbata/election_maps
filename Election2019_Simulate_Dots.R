@@ -26,7 +26,7 @@ ge2019_parties <- c("all", "brx", "con", "dup", "grn", "ind", "lab", "lib", "oth
 
 # Geographic data by Alasdair Rae
 # https://github.com/alasdairrae/wpc
-uk_wpc <- readOGR("wpcfiles/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_with_data_from_v7")
+uk_wpc <- readOGR("wpc/files/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_with_data_from_v7")
 
 # Merge
 uk_wpc <- uk_wpc[, c("ccode1", "cname1")]
