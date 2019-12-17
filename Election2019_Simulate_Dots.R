@@ -43,15 +43,14 @@ votes_per_dot <- 10
 uk_wpc_sim_points_df <- NA
 
 # Log
-log_file <- file("Election2019_Simulate_Dots--log.txt")
+sink("Election2019_Simulate_Dots--log.txt")
 
 # For each constituency
 for (i in 1:nrow(uk_wpc)) {
   
   # Print name
   to_log <- paste(i,":", uk_wpc[i, ]@data$cname1)
-  cat(to_log)
-  write(to_log, log_file, append=TRUE)
+  cat(to_log, "\n")
   
   # For each party
   # generated a proportional vector of characters with the party id
@@ -85,17 +84,14 @@ for (i in 1:nrow(uk_wpc)) {
   
   # Print to check numbers
   to_log <- paste("\n\tDots target:", votes_n)
-  cat(to_log)
-  write(to_log, log_file, append=TRUE)
+  cat(to_log, "\n")
   to_log <- paste("\n\tDots generated:", length(this_uk_wpc_sim_points@coords[, 1]))
-  cat(to_log)
-  write(to_log, log_file, append=TRUE)
+  cat(to_log, "\n")
   
   # Add warning if numbers don't match              
   if (length(this_uk_wpc_sim_points@coords) < votes_n) {
     to_log <- paste("\tMISSING", votes_n - length(this_uk_wpc_sim_points@coords), "dots!")
-    cat(to_log)
-    write(to_log, log_file, append=TRUE)
+    cat(to_log, "\n")
   }
   
   # Combine votes and points
@@ -112,14 +108,13 @@ for (i in 1:nrow(uk_wpc)) {
   }
   
   # Newlines
-  to_log <- "\n\n"
-  cat(to_log)
-  write(to_log, log_file, append=TRUE)
+  to_log <- "\n"
+  cat(to_log, "\n")
   
 }
 
 # Close log file
-close(log_file)
+sink()
 
 
 

@@ -18,7 +18,7 @@ library(tmap)
 # Load data ---------------------------------------------------------------
 
 # Load dots
-uk_wpc_sim_points_df <- readOGR("dots/ge2019_sim_points_10ppp.gpkg", "uk_wpc_sim_points")
+sim_points_df <- readOGR("dots/ge2019_sim_points_10ppp.gpkg", "uk_wpc_sim_points")
 
 # Set party colours
 # https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes
@@ -28,29 +28,38 @@ party_colours_df <- data.frame(
 )
 
 # Merge with party colours
-uk_wpc_sim_points_df <- merge(uk_wpc_sim_points_df, party_colours_df, by.x = "vote", by.y = "party")
-uk_wpc_sim_points_df$party_colour <- as.character(uk_wpc_sim_points_df$party_colour)
+sim_points_df <- merge(sim_points_df, party_colours_df, by.x = "vote", by.y = "party")
+sim_points_df$party_colour <- as.character(sim_points_df$party_colour)
 
 
 
 # Map ---------------------------------------------------------------------
 
 # Define map
-uk_wpc_sim_points_map <- tm_shape(uk_wpc_sim_points_df) +
+uk_wpc_sim_points_map <- tm_shape(
+    sim_points_df,) +
   tm_layout(
-    bg.color = "#000000"
+    bg.color = "#000000",
+    outer.bg.color = "#000000",
+    title = "UK General Election 2019",
+    title.color = "#FFFFFF"
   ) +
   tm_dots(
     col = "party_colour",
     border.alpha = 0,
     size = 0.0001
-  ) 
+  ) +
+  tm_credits(
+    "1 dot = 10 votes\nElection results data by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+    position=c("left", "top"),
+    col = "#FFFFFF"
+  )
 
 
 # Save --------------------------------------------------------------------
 
 # Resolution
-map_dpi = 600
+map_dpi = 1200
 
 # Save
 tmap_save(
