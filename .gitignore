@@ -43,7 +43,7 @@ files/*
 ge2019/*
 dots/*
 
-# Other
+# Mac DS_Store files
 .DS_Store
 maps/.DS_Store
 
