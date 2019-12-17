@@ -50,7 +50,7 @@ uk_wpc_sim_points_map <- tm_shape(
     size = 0.0001
   ) +
   tm_credits(
-    "1 dot = 10 votes\nElection results data by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+    "1 dot = 10 votes\n\nv0.1 17/12/2019\nby Stefano De Sabbata @maps4thought\n\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
     position=c("left", "top"),
     col = "#FFFFFF"
   )

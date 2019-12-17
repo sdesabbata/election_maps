@@ -39,10 +39,11 @@ vignettes/*.pdf
 .Renviron
 
 # Items in folder
-/files/*
-/uk_wpc_sim_points/*
-/other/*
-/dots/*
+files/*
+ge2019/*
+dots/*
 
 # Other
 .DS_Store
+maps/.DS_Store
+
