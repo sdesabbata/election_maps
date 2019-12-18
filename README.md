@@ -4,7 +4,7 @@ The 2019 UK General Election dot map provides an overview of the geographic dist
 
 The map combines [election results data](https://drive.google.com/file/d/19Z1YbmmjzDqMl2rzrk0XTfNrbRJDAMtU/view) ([not verified](https://twitter.com/eldenvo/status/1205525303092756482)) by [Alex Denvir](https://twitter.com/eldenvo) and [UK constituencies geographic data](https://github.com/alasdairrae/wpc) by [Alasdair Rae](https://twitter.com/undertheraedar).
 
-![](maps/ge2019_sim_points_10ppp_150dpi.png){width=50%}
+![](maps/ge2019_sim_points_10ppp_150dpi.png){:height="50%" width="50%"}
 
 ## Instructions
 
