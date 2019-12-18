@@ -38,3 +38,6 @@ drive_download(
 
 # Create dots dir if necessary
 ifelse(!dir.exists(file.path(".", "dots")), dir.create(file.path(".", "dots")), FALSE)
+
+# Create maps dir if necessary
+ifelse(!dir.exists(file.path(".", "maps")), dir.create(file.path(".", "maps")), FALSE)
