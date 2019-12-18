@@ -1,4 +1,4 @@
-# Election dot maps
+# Election maps
 
 The 2019 UK General Election dot map provides an overview of the geographic distribution of votes cast per UK constituency during the 2019 UK General Election and its intersection with population density. Each dot represents 10 votes cast for one party in a constituency, and it is colour coded by the [party colour](https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes).
 
