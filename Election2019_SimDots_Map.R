@@ -37,7 +37,8 @@ sim_points_df$party_colour <- as.character(sim_points_df$party_colour)
 
 # Define map
 uk_wpc_sim_points_map <- tm_shape(
-    sim_points_df,) +
+    sim_points_df
+  ) +
   tm_layout(
     bg.color = "#000000",
     outer.bg.color = "#000000",
