@@ -96,8 +96,13 @@ make_dot_map <- function(area_type, area_name){
     ) +
     tm_credits(
       "v0.1 18/12/2019\nby Stefano De Sabbata @maps4thought\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
-      position=c("right", "top"),
+      position=c("right", "bottom"),
       align = "right",
+      col = "#FFFFFF"
+    ) +
+    tm_credits(
+      "Licensed under the GNU General Public License v3.0\nhttps://www.gnu.org/licenses/gpl-3.0.html",
+      position=c("left", "bottom"),
       col = "#FFFFFF"
     )
   
