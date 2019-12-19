@@ -1,10 +1,8 @@
 # Election maps
 
-The 2019 UK General Election dot map provides an overview of the geographic distribution of votes cast per UK constituency during the 2019 UK General Election and its intersection with population density. Each dot represents 10 votes cast for one party in a constituency, and it is colour coded by the [party colour](https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes).
+The 2019 UK General Election dot maps provide an overview of the geographic distribution of votes cast per UK constituency during the 2019 UK General Election and its intersection with population density. Each dot represents 10 votes cast for one party in a constituency, and it is colour coded by the [party colour](https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes).
 
-The map combines [election results data](https://drive.google.com/file/d/19Z1YbmmjzDqMl2rzrk0XTfNrbRJDAMtU/view) ([not verified](https://twitter.com/eldenvo/status/1205525303092756482)) by [Alex Denvir](https://twitter.com/eldenvo) and [UK constituencies geographic data](https://github.com/alasdairrae/wpc) by [Alasdair Rae](https://twitter.com/undertheraedar).
-
-<img src="maps/ge2019_sim_points_10ppp_150dpi.png" width="50%"/>
+The code is released under [Licensed under the GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). The images contained in this repository are released under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License](https://creativecommons.org/licenses/by-sa/4.0/). They contain data from from the [House of Commons Library](https://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7979) under [Open Parliament Licence](https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/), [mySociety](https://www.mysociety.org/wehelpyou/see-a-list-of-every-mp-in-parliament/), [Office for National Statistics](http://geoportal.statistics.gov.uk/) and [Ordnance Survey](https://www.ordnancesurvey.co.uk/opendatadownload/products.html) as [compiled by Alasdair Rae](https://github.com/alasdairrae/wpc) [@undertheraedar](https://twitter.com/undertheraedar), and from the [House of Commons Library](https://researchbriefings.parliament.uk/ResearchBriefing/Summary/CBP-7979) as [compiled by Alex Denvir](https://drive.google.com/file/d/19Z1YbmmjzDqMl2rzrk0XTfNrbRJDAMtU/view) [@eldenvo](https://twitter.com/eldenvo).
 
 ## Instructions
 

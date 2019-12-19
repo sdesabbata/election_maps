@@ -51,8 +51,14 @@ uk_wpc_sim_points_map <- tm_shape(
     size = 0.0001
   ) +
   tm_credits(
-    "1 dot = 10 votes\n\nby Stefano De Sabbata @maps4thought\nv0.1 18/12/2019\n\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+    "1 dot = 10 votes\n\n",
     position=c("left", "top"),
+    col = "#FFFFFF"
+  ) +
+  tm_credits(
+    "CC BY-SA 4.0\nby Stefano De Sabbata @maps4thought\ngithub.com/sdesabbata/election_maps\nIncludes data from House of Commons Library,\nmySociety, Office for National Statistics,\nOrdnance Survey,  Alasdair Rae @undertheraedar,\nand Alex Denvir @eldenvo",
+    position=c("left", "top"),
+    size = 0.5,
     col = "#FFFFFF"
   )
 

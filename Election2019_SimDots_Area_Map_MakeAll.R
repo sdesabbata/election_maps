@@ -48,7 +48,7 @@ sim_points_df$party_colour <- as.character(sim_points_df$party_colour)
 
 # Map function ------------------------------------------------------------
 
-make_dot_map <- function(area_type, area_name){
+make_dot_map <- function(area_type, area_name, dot_size){
 
   # Retrieve constituencies
   constituencies <- constituencies_areas %>%
@@ -81,12 +81,13 @@ make_dot_map <- function(area_type, area_name){
       #title = paste("UK General Election 2019 -", area_name),
       title = paste0("UK General Election 2019\n", area_name),
       title.color = "#FFFFFF",
-      title.position = c("left", "top")
+      title.position = c("left", "top"),
+      asp = 1
     ) +
     tm_dots(
       col = "party_colour",
       border.alpha = 0,
-      size = 0.0025
+      size = dot_size
     ) +
     tm_credits(
       "1 dot = 10 votes",
@@ -95,14 +96,10 @@ make_dot_map <- function(area_type, area_name){
       col = "#FFFFFF"
     ) +
     tm_credits(
-      "v0.1 18/12/2019\nby Stefano De Sabbata @maps4thought\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+      "CC BY-SA 4.0\nby Stefano De Sabbata @maps4thought\ngithub.com/sdesabbata/election_maps\nIncludes data from House of Commons Library,\nmySociety, Office for National Statistics,\nOrdnance Survey,  Alasdair Rae @undertheraedar,\n and Alex Denvir @eldenvo",
       position=c("right", "bottom"),
       align = "right",
-      col = "#FFFFFF"
-    ) +
-    tm_credits(
-      "Licensed under the GNU General Public License v3.0\nhttps://www.gnu.org/licenses/gpl-3.0.html",
-      position=c("left", "bottom"),
+      size = 0.5,
       col = "#FFFFFF"
     )
   
@@ -144,13 +141,13 @@ make_dot_map <- function(area_type, area_name){
 # Make all maps -----------------------------------------------------------
 
 for (this_county in all_counties) {
-  make_dot_map("county", this_county)
+  make_dot_map("county", this_county, 0.0025)
 }
 
 for (this_ukpart in all_ukparts) {
-  make_dot_map("ukpart", this_ukpart)
+  make_dot_map("ukpart", this_ukpart, 0.0005)
 }
 
 for (this_ukcountry in all_ukcountries) {
-  make_dot_map("ukcountry", this_ukcountry)
+  make_dot_map("ukcountry", this_ukcountry, 0.0001)
 }

@@ -31,7 +31,7 @@ constituencies_areas <- uk_wpc@data %>%
 area_type <- "county"
 
 # Set area name
-area_name <- "Leicestershire"
+area_name <- "London"
 
 # Retrieve constituencies
 constituencies <- constituencies_areas %>%
@@ -103,9 +103,9 @@ uk_wpc_sim_points_map <- tm_shape(
     col = "#FFFFFF"
   ) +
   tm_credits(
-    "v0.1 18/12/2019\nby Stefano De Sabbata @maps4thought\nElection results data (not verified) by Alex Denvir @eldenvo\nGeographic data by Alasdair Rae @undertheraedar",
+    "CC BY-SA 4.0\nby Stefano De Sabbata @maps4thought\ngithub.com/sdesabbata/election_maps\nIncludes data from House of Commons Library,\nmySociety, Office for National Statistics,\nOrdnance Survey,  Alasdair Rae @undertheraedar,\n and Alex Denvir @eldenvo",
     position=c("right", "top"),
-    align = "right",
+    size = 0.5,
     col = "#FFFFFF"
   )
 
