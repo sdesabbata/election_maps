@@ -27,3 +27,6 @@ source("Election2019_Simulate_Dots.R")
 
 # Step 3: Generate map
 source("Election2019_SimDots_Map.R")
+
+# or use Election2019_SimDots_Area_Map.R 
+# to create local area maps

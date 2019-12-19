@@ -9,14 +9,34 @@
 
 # Define subset -----------------------------------------------------------
 
-# Use a list of constituencies to select
+# Use
 
+# Geographic data by Alasdair Rae
+# https://github.com/alasdairrae/wpc
+uk_wpc <- readOGR("wpc/files/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_with_data_from_v7")
+
+constituencies_areas <- uk_wpc@data %>%
+  select(cname1, county, ukpart, ukcountry)
+
+# Set area type as one of the following:
+# "county", "ukpart", "ukcountry"
+area_type <- "county"
+
+# Set area name
+area_name <- "Leicestershire"
+
+# Retrieve constituencies
+constituencies <- constituencies_areas %>%
+  filter_(paste(area_type, "== area_name")) %>%
+  pull(cname1)
+
+
+# Define your list of constituencies
+
+# Area name
 #area_name <- "Leicester"
+# List of constituencies
 #constituencies <- c("Leicester East", "Leicester South", "Leicester West")
-
-area_name <- "Greater London"
-constituencies <- c("Barking", "Battersea", "Beckenham", "Bermondsey and Old Southwark", "Bethnal Green and Bow", "Bexleyheath and Crayford", "Brent Central", "Brent North", "Brentford and Isleworth", "Bromley and Chislehurst", "Camberwell and Peckham", "Carshalton and Wallington", "Chelsea and Fulham", "Chingford and Woodford Green", "Chipping Barnet", "Cities of London and Westminster", "Croydon Central", "Croydon North", "Croydon South", "Dagenham and Rainham", "Dulwich and West Norwood", "Ealing Central and Acton", "Ealing North", "Ealing, Southall", "East Ham", "Edmonton", "Eltham", "Enfield North", "Enfield, Southgate", "Erith and Thamesmead", "Feltham and Heston", "Finchley and Golders Green", "Greenwich and Woolwich", "Hackney North and Stoke Newington", "Hackney South and Shoreditch", "Hammersmith", "Hampstead and Kilburn", "Harrow East", "Harrow West", "Hayes and Harlington", "Hendon", "Holborn and St Pancras", "Hornchurch and Upminster", "Hornsey and Wood Green", "Ilford North", "Ilford South", "Islington North", "Islington South and Finsbury", "Kensington", "Kingston and Surbiton", "Lewisham, Deptford", "Lewisham East", "Lewisham West and Penge", "Leyton and Wanstead", "Mitcham and Morden", "Old Bexley and Sidcup", "Orpington", "Poplar and Limehouse", "Putney", "Richmond Park", "Romford", "Ruislip, Northwood and Pinner", "Streatham", "Sutton and Cheam", "Tooting", "Tottenham", "Twickenham", "Uxbridge and South Ruislip", "Vauxhall", "Walthamstow", "West Ham", "Westminster North", "Wimbledon")
-
 
 
 # Libraries ---------------------------------------------------------------
@@ -47,9 +67,6 @@ sim_points_df$party_colour <- as.character(sim_points_df$party_colour)
 
 # Subset data -------------------------------------------------------------
 
-# Geographic data by Alasdair Rae
-# https://github.com/alasdairrae/wpc
-uk_wpc <- readOGR("wpc/files/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_with_data_from_v7")
 
 # Subset points using bbox
 sim_points_df_bboxed <- sim_points_df[
