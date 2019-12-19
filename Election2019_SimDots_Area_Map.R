@@ -7,6 +7,14 @@
 
 
 
+# Libraries ---------------------------------------------------------------
+
+library(tidyverse)
+library(rgdal)
+library(tmap)
+
+
+
 # Define subset -----------------------------------------------------------
 
 # Use
@@ -37,14 +45,6 @@ constituencies <- constituencies_areas %>%
 #area_name <- "Leicester"
 # List of constituencies
 #constituencies <- c("Leicester East", "Leicester South", "Leicester West")
-
-
-# Libraries ---------------------------------------------------------------
-
-library(tidyverse)
-library(rgdal)
-library(tmap)
-
 
 
 # Load data ---------------------------------------------------------------
