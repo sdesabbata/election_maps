@@ -17,8 +17,6 @@ library(tmap)
 
 # Define subset -----------------------------------------------------------
 
-# Use
-
 # Geographic data by Alasdair Rae
 # https://github.com/alasdairrae/wpc
 uk_wpc <- readOGR("wpc/files/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_with_data_from_v7")
@@ -26,9 +24,9 @@ uk_wpc <- readOGR("wpc/files/uk_wpc_2019_with_data_from_v7.gpkg", "uk_wpc_2019_w
 constituencies_areas <- uk_wpc@data %>%
   select(cname1, county, ukpart, ukcountry)
 
-all_counties <- pull(county) %>% as.character() %>% unique()
-all_ukparts <- pull(ukpart) %>% as.character() %>% unique()
-all_ukcountries <- pull(ukcountry) %>% as.character() %>% unique()
+all_counties <- constituencies_areas %>% pull(county) %>% as.character() %>% unique()
+all_ukparts <- constituencies_areas %>% pull(ukpart) %>% as.character() %>% unique()
+all_ukcountries <- constituencies_areas %>% pull(ukcountry) %>% as.character() %>% unique()
 
 
 # Load data ---------------------------------------------------------------
@@ -113,7 +111,7 @@ make_dot_map <- function(area_type, area_name){
   tmap_save(
     uk_wpc_sim_points_map,
     paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
-    width = 298, 
+    width = 210, 
     height = 210,
     units = "mm",
     dpi = map_dpi
@@ -129,7 +127,7 @@ make_dot_map <- function(area_type, area_name){
   tmap_save(
     uk_wpc_sim_points_map,
     paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
-    width = 298, 
+    width = 210, 
     height = 210,
     units = "mm",
     dpi = map_dpi
