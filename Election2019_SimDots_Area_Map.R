@@ -118,7 +118,7 @@ map_dpi = 1200
 # Save
 tmap_save(
   uk_wpc_sim_points_map,
-  paste0("maps/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
+  paste0("maps/ge2019_sim_points_10ppp_", str_remove_all(area_name, " "), "_", map_dpi, "dpi.png"), 
   width = 298, 
   height = 210,
   units = "mm",
@@ -134,7 +134,7 @@ map_dpi = 150
 # Save
 tmap_save(
   uk_wpc_sim_points_map,
-  paste0("maps/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
+  paste0("maps/ge2019_sim_points_10ppp_", str_remove_all(area_name, " "), "_", map_dpi, "dpi.png"), 
   width = 298, 
   height = 210,
   units = "mm",

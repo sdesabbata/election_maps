@@ -112,7 +112,7 @@ make_dot_map <- function(area_type, area_name, dot_size){
   # Save
   tmap_save(
     uk_wpc_sim_points_map,
-    paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
+    paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove_all(area_name, " "), "_", map_dpi, "dpi.png"), 
     width = 210, 
     height = 210,
     units = "mm",
@@ -128,7 +128,7 @@ make_dot_map <- function(area_type, area_name, dot_size){
   # Save
   tmap_save(
     uk_wpc_sim_points_map,
-    paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove(area_name, " "), "_", map_dpi, "dpi.png"), 
+    paste0("maps_all_areas/ge2019_sim_points_10ppp_", str_remove_all(area_name, " "), "_", map_dpi, "dpi.png"), 
     width = 210, 
     height = 210,
     units = "mm",
